@@ -1,21 +1,154 @@
 .header {
-  padding: 20px 0;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-areas:
+    "l . b"
+}
+
+.burger-btn {
+  grid-area: b;
+}
+
+.burger-icon {
+  width: 32px;
+  height: 22px;
+  stroke: #2E2F42;
+  fill: #2E2F42;
+}
+
+
+.logo {
+  grid-area: l;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--NAVY-BLUE, #2E2F42);
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 21px;
+  /* 116.667% */
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+}
+
+.logo--accent {
+  color: var(--IRIS, #4D5AE5);
+}
+
+.nav {
+  display: none;
+  grid-area: n;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 40px;
+
+
 }
+
+.nav-item {
+  color: var(--NAVY-BLUE, #2E2F42);
+
+  /* Body Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  /* 150% */
+  letter-spacing: 0.32px;
+}
+
 
 .nav-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color: var(--OCEAN, #404BBF);
+  }
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+.active::after {
+  content: "";
+  background-color: #404BBF;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+
+.contacts-list {
+  grid-area: c;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts-item {}
+
+.contacts-link {
+  color: var(--SLATE, #434455);
+
+  /* Body */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 150% */
+  letter-spacing: 0.32px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    color: var(--SLATE, #434455);
+
+    /* Small Text */
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    /* 116.667% */
+    letter-spacing: 0.48px;
+  }
+
+  .header {
+    grid-template-areas:
+      "l n c"
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+  .contacts-list {
+
+    flex-direction: row;
+    gap: 40px;
+  }
 }
