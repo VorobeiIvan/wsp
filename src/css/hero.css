@@ -1,0 +1,51 @@
+.hero {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(/assets/images/hero/desktop/people-office.jpg) lightgray 0px -167.766px / 100% 139.922% no-repeat;
+    min-height: 600px;
+}
+
+.hero-title {
+    width: 496px;
+    color: var(--WHITE, #FFF);
+    text-align: center;
+
+    /* Header 1 */
+    font-family: Roboto;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    /* 107.143% */
+    letter-spacing: 1.12px;
+}
+
+.hero-button {
+    display: inline-flex;
+    padding: 16px 32px;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--WHITE, #FFF);
+
+    border-radius: 4px;
+    background: var(--IRIS, #4D5AE5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    /* Button Text */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.64px;
+
+    &:hover,
+    &:focus {
+        background-color: var(--OCEAN, #404BBF);
+    }
+
+}

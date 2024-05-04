@@ -1,0 +1,24 @@
+.doing {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.doing-title {
+    margin: 0 auto;
+}
+
+.doing-list {
+    display: flex;
+    gap: 24px;
+}
+
+.doing-item {
+    border: 1px solid var(--CORNFLOWER, #E7E9FC);
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.doing-img {}

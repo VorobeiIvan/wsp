@@ -1,4 +1,6 @@
 .header {
+  padding-top: 24px;
+  padding-bottom: 24px;
   display: grid;
   justify-content: space-between;
   align-items: center;
@@ -93,6 +95,7 @@
   display: none;
   align-items: center;
   justify-content: center;
+
 }
 
 .contacts-item {}
@@ -108,6 +111,11 @@
   line-height: 24px;
   /* 150% */
   letter-spacing: 0.32px;
+
+  &:hover,
+  &:focus {
+    color: var(--OCEAN, #404BBF);
+  }
 }
 
 
