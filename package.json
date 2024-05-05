@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "glob": "^8.1.0",
     "vite": "^4.5.2",
-    "glob": "^8.1.0"
+    "vite-plugin-svg": "^0.7.0"
   },
   "license": "ISC",
   "dependencies": {
